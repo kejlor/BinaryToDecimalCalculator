@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BinaryToDecimalCalculator</string>
+    <string name="binary_input">Input binary number</string>
+    <string name="decimal_result">Result: </string>
+</resources>
