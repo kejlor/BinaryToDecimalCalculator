@@ -14,19 +14,19 @@ class MainActivity : AppCompatActivity() {
 
         val binaryNumberInput = findViewById<EditText>(R.id.textInput)
         val binaryNumberOutput = findViewById<TextView>(R.id.resultOutput)
-        val binaryToDecimal = BinaryToDecimal()
+        val binaryToDecimal = BinaryToDecimal(this@MainActivity)
 
-        binaryNumberInput.addTextChangedListener(object : TextWatcher{
+        binaryNumberInput.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
             }
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                binaryNumberOutput.text = binaryToDecimal.parse(binaryNumberInput.text.toString())
+                binaryNumberOutput.text =
+                    binaryToDecimal.parse(binaryNumberInput.text.toString()).toString()
             }
 
             override fun afterTextChanged(p0: Editable?) {
             }
         })
     }
-
 }
